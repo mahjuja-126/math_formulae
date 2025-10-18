@@ -9,38 +9,26 @@
     /* Top lapis-lazuli strip */
   .lapis-strip {
   width: 100%;
-  background-image: url('ss.jpg'); /* keep your uploaded image */
-  background-size: 100% auto;      /* full width, height adjusts automatically */
+  height: 443px;                /* natural height of your image */
+  background-image: url('ss.jpg');
+  background-size: 100% 100%;   /* stretch to full width and natural height */
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
 }
 
-/* Heading text with white color and thin blue outline */
+/* Heading text */
 .site-heading {
   position: absolute;
   top: 0;
   left: 20px;
-  font-size: 24px;
+  font-size: 36px;               /* adjust based on image size */
   font-weight: bold;
-  line-height: normal;           /* no fixed height; aligns naturally */
-  color: white;                  /* white text */
-  -webkit-text-stroke: 1px #4169E1; /* thin royal blue outline */
-  text-stroke: 1px #4169E1;         /* fallback */
+  color: white;
+  -webkit-text-stroke: 2px #4169E1; /* thin blue outline */
+  text-stroke: 2px #4169E1;
 }
 
-
-
-    /* Site heading text on top-left */
-    .site-heading {
-      position: absolute;
-      top: 0;
-      left: 20px;
-      color: black;             /* heading text color */
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 50px;        /* vertically center in the strip */
-    }
   </style>
 </head>
 <body class="bg-white flex flex-col items-center min-h-screen">
