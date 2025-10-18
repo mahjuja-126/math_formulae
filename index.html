@@ -8,33 +8,35 @@
   <style>
     /* Top lapis-lazuli strip */
     .lapis-strip {
-      width: 100%;
-      height: 50px; /* matches your 653x50 px image ratio */
-      background-image: url('ss.jpg'); 
+      width: 100%;               /* full page width */
+      height: 50px;              /* fixed height */
+      background-image: url('ss.jpg'); /* your uploaded image */
+      background-size: cover;    /* cover full width */
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
     }
 
+    /* Site heading text on top-left */
     .site-heading {
       position: absolute;
       top: 0;
       left: 20px;
-      color: white;
+      color: black;             /* heading text color */
       font-size: 24px;
       font-weight: bold;
-      line-height: 50px; /* vertically center inside strip */
+      line-height: 50px;        /* vertically center in the strip */
     }
   </style>
 </head>
 <body class="bg-white flex flex-col items-center min-h-screen">
 
-  <!-- Top lapis strip -->
+  <!-- Top lapis-lazuli strip -->
   <div class="lapis-strip">
     <div class="site-heading">Site Heading</div>
   </div>
 
-  <!-- Main content -->
+  <!-- Main content: buttons -->
   <main class="flex flex-col items-center justify-center mt-20 space-y-8">
     <a href="basic.html" target="_blank">
       <button class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white text-2xl rounded-2xl shadow-lg transition transform hover:-translate-y-0.5">
