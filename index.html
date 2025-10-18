@@ -7,28 +7,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Top lapis-lazuli strip */
-  .lapis-strip {
-  width: 100%;
-  height: 443px;                /* natural height of your image */
-  background-image: url('ss.jpg');
-  background-size: 100% 100%;   /* stretch to full width and natural height */
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
+    .lapis-strip {
+      width: 100%;
+      height: auto;                   /* let height adjust naturally */
+      max-height: 443px;              /* don't exceed original image height */
+      background-image: url('ss.jpg'); /* your uploaded image */
+      background-size: 100% auto;     /* full width, natural height */
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
 
-/* Heading text */
-.site-heading {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  font-size: 36px;               /* adjust based on image size */
-  font-weight: bold;
-  color: white;
-  -webkit-text-stroke: 2px #4169E1; /* thin blue outline */
-  text-stroke: 2px #4169E1;
-}
+    /* Heading text: white with dark blue outline */
+    .site-heading {
+      position: absolute;
+      top: 20px;                     /* padding from top of strip */
+      left: 20px;                    /* padding from left */
+      font-size: 36px;               
+      font-weight: bold;
+      color: white;                  
+      -webkit-text-stroke: 3px #00008B; /* dark blue thick outline */
+      text-stroke: 3px #00008B;         /* fallback */
+      z-index: 2;                    /* ensure it stays above background */
+    }
 
+    /* Optional: make buttons stay on white background */
+    main {
+      z-index: 1;
+    }
   </style>
 </head>
 <body class="bg-white flex flex-col items-center min-h-screen">
