@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyperbola | Coordinate Geometry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 p-8">
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-8">
+    Hyperbola (x²/a² − y²/b² = 1)
+  </h1>
+
+  <!-- Diagram Placeholder -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-gray-400">
+    <h2 class="text-xl font-semibold mb-3">Standard Diagram</h2>
+    <p class="text-sm text-gray-600 mb-3">
+      Diagram showing center, vertices, foci, asymptotes, axes, and latus rectum.
+    </p>
+    <img src="hyperbola.png" alt="Hyperbola Diagram" class="max-w-md">
+  </section>
+
+  <!-- Definition -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-blue-500">
+    <h2 class="text-xl font-semibold mb-3">Definition</h2>
+    <p>
+      A <strong>hyperbola</strong> is the locus of a point such that the absolute
+      difference of its distances from two fixed points (foci) is constant.
+    </p>
+  </section>
+
+  <!-- Standard Properties -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-green-500">
+    <h2 class="text-xl font-semibold mb-4">Standard Properties</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Standard Equation: x²/a² − y²/b² = 1</li>
+      <li>Center: (0, 0)</li>
+      <li>Eccentricity: e = √((a² + b²) / a²)</li>
+      <li>Vertices: (±a, 0)</li>
+      <li>Foci: (±ae, 0)</li>
+      <li>Directrices: x = ±a / e</li>
+    </ul>
+  </section>
+
+  <!-- Axes -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-yellow-500">
+    <h2 class="text-xl font-semibold mb-4">Axes</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Transverse Axis: y = 0</li>
+      <li>Length of Transverse Axis: 2a</li>
+      <li>Conjugate Axis: x = 0</li>
+      <li>Length of Conjugate Axis: 2b</li>
+    </ul>
+  </section>
+
+  <!-- Latus Rectum -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
+    <h2 class="text-xl font-semibold mb-4">Latus Rectum</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Length of Latus Rectum: 2b² / a</li>
+    </ul>
+  </section>
+
+  <!-- Asymptotes -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-red-500">
+    <h2 class="text-xl font-semibold mb-4">Asymptotes</h2>
+
+    <p class="font-mono bg-gray-100 p-2 rounded">
+      y = ±(b/a)x
+    </p>
+  </section>
+
+  <!-- Parametric Coordinates -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-teal-500">
+    <h2 class="text-xl font-semibold mb-4">Parametric Coordinates</h2>
+
+    <p class="mb-2 text-sm text-gray-700">
+      A point on the hyperbola can be expressed parametrically.
+    </p>
+
+    <p class="font-mono bg-gray-100 p-2 rounded">
+      (x, y) = (a secθ, b tanθ)
+    </p>
+  </section>
+
+</body>
+</html>
