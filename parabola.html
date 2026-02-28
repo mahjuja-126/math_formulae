@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabola | Coordinate Geometry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 p-8">
+
+  <h1 class="text-3xl font-bold text-blue-800 mb-8">
+    Parabola (y² = 4ax)
+  </h1>
+
+  <!-- Diagram Placeholder -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-gray-400">
+    <h2 class="text-xl font-semibold mb-3">Standard Diagram</h2>
+    <p class="text-sm text-gray-600 mb-3">
+      Diagram of parabola showing vertex, focus, directrix, axis, and latus rectum.
+    </p>
+    <img src="parabola.png" alt="Parabola Diagram" class="max-w-md">
+  </section>
+
+  <!-- Definition -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-blue-500">
+    <h2 class="text-xl font-semibold mb-3">Definition</h2>
+    <p>
+      A <strong>parabola</strong> is the locus of a point whose distance from a fixed
+      point (focus) is equal to its perpendicular distance from a fixed line (directrix).
+    </p>
+    <p class="mt-2 font-mono bg-gray-100 p-2 rounded">
+      SP = PM
+    </p>
+  </section>
+
+  <!-- Basic Properties -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-green-500">
+    <h2 class="text-xl font-semibold mb-4">Basic Properties</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Standard Equation: y² = 4ax</li>
+      <li>Eccentricity (e): 1</li>
+      <li>Vertex: (0, 0)</li>
+      <li>Focus: (a, 0)</li>
+      <li>Axis of Parabola: y = 0</li>
+      <li>Directrix: x = −a</li>
+    </ul>
+  </section>
+
+  <!-- Latus Rectum -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-yellow-500">
+    <h2 class="text-xl font-semibold mb-4">Latus Rectum</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Equation of Latus Rectum: x = a</li>
+      <li>Length of Latus Rectum: 4a</li>
+      <li>Endpoints: (a, 2a), (a, −2a)</li>
+    </ul>
+  </section>
+
+  <!-- Distance Properties -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
+    <h2 class="text-xl font-semibold mb-4">Distance Properties</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Distance from P(x, y) to Focus = √[(x − a)² + y²]</li>
+      <li>Distance from P(x, y) to Directrix = |x + a|</li>
+    </ul>
+  </section>
+
+  <!-- Parametric Form -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-teal-500">
+    <h2 class="text-xl font-semibold mb-4">Parametric Coordinates</h2>
+
+    <p class="mb-3 text-sm text-gray-700">
+      Any point on the parabola can be represented parametrically.
+    </p>
+
+    <p class="font-mono bg-gray-100 p-2 rounded">
+      (x, y) = (at², 2at)
+    </p>
+  </section>
+
+  <!-- Tangent -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-red-500">
+    <h2 class="text-xl font-semibold mb-4">Equation of Tangent</h2>
+
+    <p class="mb-2 text-sm text-gray-700">
+      Tangent to the parabola at point (x₁, y₁).
+    </p>
+
+    <p class="font-mono bg-gray-100 p-2 rounded">
+      yy₁ = 2a(x + x₁)
+    </p>
+  </section>
+
+  <!-- Shifted Parabola -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
+    <h2 class="text-xl font-semibold mb-4">Shifted Parabola</h2>
+
+    <p class="mb-2 text-sm text-gray-700">
+      Parabola with vertex at (α, β).
+    </p>
+
+    <p class="font-mono bg-gray-100 p-2 rounded">
+      (y − β)² = 4a(x − α)
+    </p>
+  </section>
+
+</body>
+</html>
