@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Algebra</title>
+  <title>Algebra (Basic)</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -18,32 +18,40 @@
     <h2 class="text-xl font-semibold mb-4">Algebraic Identities</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>(a + b)² = a² + 2ab + b²</li>
-      <li>(a − b)² = a² − 2ab + b²</li>
-      <li>(a + b)(a − b) = a² − b²</li>
-      <li>a² + b² = (a + b)² − 2ab</li>
-      <li>a² + b² = (a − b)² + 2ab</li>
-      <li>a² + b² = [(a + b)² + (a − b)²] / 2</li>
-      <li>ab = [(a + b)² − (a − b)²] / 4</li>
-      <li>(a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca</li>
-      <li>(a + b)³ = a³ + 3a²b + 3ab² + b³</li>
-      <li>a³ + b³ = (a + b)(a² − ab + b²)</li>
-      <li>a³ − b³ = (a − b)(a² + ab + b²)</li>
+      <li>(a + b)^2 = a^2 + 2ab + b^2</li>
+      <li>(a - b)^2 = a^2 - 2ab + b^2</li>
+      <li>a^2 + b^2 = (a+b)^2 - 2ab</li>
+      <li>a^2 + b^2 = (a-b)^2 + 2ab</li>
+      <li>a^2 + b^2 = ((a+b)^2 + (a-b)^2)/2</li>
+      <li>ab = ((a+b)^2 - (a-b)^2)/4</li>
+      <li>a^2 - b^2 = (a+b)(a-b)</li>
+      <li>(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)</li>
+      <li>a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab + bc + ca)</li>
+      <li>2(a^2 + b^2 + c^2) = (a+b)^2 + (b+c)^2 + (c+a)^2</li>
+      <li>(a-b-c)^2 = a^2 + b^2 + c^2 - 2ab + 2bc - 2ac</li>
+      <li>(a + b)^3 = a^3 + b^3 + 3ab(a+b)</li>
+      <li>a^3 + b^3 = (a+b)(a^2 - ab + b^2)</li>
+      <li>(a - b)^3 = a^3 - b^3 - 3ab(a-b)</li>
+      <li>a^3 - b^3 = (a-b)(a^2 + ab + b^2)</li>
+      <li>x^2 + (a+b)x + ab = (x+a)(x+b)</li>
     </ul>
   </section>
 
-  <!-- Laws of Indices -->
+  <!-- Exponents & Powers -->
   <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-green-500">
-    <h2 class="text-xl font-semibold mb-4">Laws of Indices</h2>
+    <h2 class="text-xl font-semibold mb-4">Exponents & Powers</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>aᵐ × aⁿ = aᵐ⁺ⁿ</li>
-      <li>aᵐ / aⁿ = aᵐ⁻ⁿ</li>
-      <li>(ab)ⁿ = aⁿbⁿ</li>
-      <li>(a/b)ⁿ = aⁿ / bⁿ (b ≠ 0)</li>
-      <li>(aᵐ)ⁿ = aᵐⁿ</li>
-      <li>a⁰ = 1 (a ≠ 0)</li>
-      <li>a⁻ⁿ = 1 / aⁿ</li>
+      <li>a^m × a^n = a^(m+n)</li>
+      <li>a^m / a^n = a^(m-n) (m ≥ n)</li>
+      <li>a^m / a^n = 1 / a^(n-m) (n > m)</li>
+      <li>(ab)^n = a^n × b^n</li>
+      <li>(a/b)^n = a^n / b^n, b ≠ 0</li>
+      <li>(a^m)^n = a^(mn)</li>
+      <li>a^0 = 1, a ≠ 0</li>
+      <li>a^(-n) = 1 / a^n, a ≠ 0</li>
+      <li>√a = a^(1/2)</li>
+      <li>∛a = a^(1/3)</li>
     </ul>
   </section>
 
@@ -52,51 +60,107 @@
     <h2 class="text-xl font-semibold mb-4">Logarithms</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>logₐ 1 = 0</li>
-      <li>logₐ a = 1</li>
-      <li>logₐ(MN) = logₐM + logₐN</li>
-      <li>logₐ(M/N) = logₐM − logₐN</li>
-      <li>logₐ(Mʳ) = r logₐM</li>
-      <li>logₐM = log_bM × logₐb</li>
+      <li>log_a 1 = 0</li>
+      <li>log_a a = 1</li>
+      <li>log_a (MN) = log_a M + log_a N</li>
+      <li>log_a (M/N) = log_a M - log_a N</li>
+      <li>log_a M^r = r log_a M</li>
+      <li>log_a M = log_b M × log_a b</li>
+      <li>log_a b = 1 / log_b a</li>
+    </ul>
+  </section>
+
+  <!-- Ratio & Proportion -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
+    <h2 class="text-xl font-semibold mb-4">Ratio & Proportion</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>Invertendo: If a:b = c:d, then b:a = d:c</li>
+      <li>Alternendo: If a:b = c:d, then a:c = b:d</li>
+      <li>Componendo: If a:b = c:d, then (a+b)/b = (c+d)/d</li>
+      <li>Dividendo: If a:b = c:d, then (a-b)/b = (c-d)/d</li>
+      <li>Componendo-Dividendo: If a:b = c:d, then (a+b)/(a-b) = (c+d)/(c-d)</li>
+      <li>Multiple Proportions: If a/b = c/d = e/f = g/h, then (a+c+e+g)/(b+d+f+h) = common ratio</li>
+    </ul>
+  </section>
+
+  <!-- Linear Systems -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
+    <h2 class="text-xl font-semibold mb-4">Linear Systems</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>System: a1 x + b1 y + c1 = 0 , a2 x + b2 y + c2 = 0</li>
+      <li>Cross multiplication: x/(b1c2-b2c1) = y/(c1a2-c2a1) = 1/(a1b2-a2b1)</li>
+      <li>Consistency:
+        <ul class="list-disc ml-6">
+          <li>a1/a2 ≠ b1/b2 → Unique solution</li>
+          <li>a1/a2 = b1/b2 = c1/c2 → Infinite solutions</li>
+          <li>a1/a2 = b1/b2 ≠ c1/c2 → No solution</li>
+        </ul>
+      </li>
+      <li>Homogeneous (c1=c2=0):
+        <ul class="list-disc ml-6">
+          <li>a1/a2 ≠ b1/b2 → Trivial solution (0,0)</li>
+          <li>a1/a2 = b1/b2 → Infinite solutions</li>
+        </ul>
+      </li>
     </ul>
   </section>
 
   <!-- Quadratic Equations -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-pink-500">
     <h2 class="text-xl font-semibold mb-4">Quadratic Equations</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>General form: ax² + bx + c = 0</li>
-      <li>x = (−b ± √(b² − 4ac)) / 2a</li>
-      <li>Discriminant: D = b² − 4ac</li>
-      <li>D &gt; 0 → real and unequal roots</li>
-      <li>D = 0 → real and equal roots</li>
-      <li>D &lt; 0 → no real roots</li>
+      <li>ax² + bx + c = 0</li>
+      <li>Quadratic formula: x = (-b ± √(b²-4ac)) / 2a</li>
+      <li>Discriminant: D = b² - 4ac</li>
+      <li>Nature of roots:
+        <ul class="list-disc ml-6">
+          <li>D > 0, perfect square → real, unequal, rational</li>
+          <li>D > 0, not perfect square → real, unequal, irrational</li>
+          <li>D = 0 → real, equal</li>
+          <li>D < 0 → no real roots</li>
+        </ul>
+      </li>
+      <li>Sum of roots: α + β = -b/a</li>
+      <li>Product of roots: αβ = c/a</li>
+      <li>Formation: x² - (sum)x + product = 0</li>
     </ul>
   </section>
 
-  <!-- Ratio and Proportion -->
+  <!-- Cubic Equations (Optional) -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-gray-500">
+    <h2 class="text-xl font-semibold mb-4">Cubic Equations (Optional)</h2>
+
+    <ul class="space-y-2 font-mono">
+      <li>ax³ + bx² + cx + d = 0, roots α,β,γ</li>
+      <li>Sum: α+β+γ = -b/a</li>
+      <li>Sum of products two at a time: αβ + βγ + γα = c/a</li>
+      <li>Product: αβγ = -d/a</li>
+      <li>Formation: x³ - (sum)x² + (sum of products)x - product = 0</li>
+    </ul>
+  </section>
+
+  <!-- Binomial Theorem & Factorials -->
   <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-red-500">
-    <h2 class="text-xl font-semibold mb-4">Ratio and Proportion</h2>
+    <h2 class="text-xl font-semibold mb-4">Binomial Theorem & Factorials</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>If a : b = c : d, then b : a = d : c</li>
-      <li>If a : b = c : d, then a : c = b : d</li>
-      <li>(a + b)/b = (c + d)/d</li>
-      <li>(a − b)/b = (c − d)/d</li>
-      <li>(a + b)/(a − b) = (c + d)/(c − d)</li>
+      <li>(x + y)^n = Σ (nCr) x^(n-r) y^r , r = 0 to n</li>
+      <li>General term: T_(r+1) = nCr x^(n-r) y^r</li>
+      <li>Factorial: n! = n(n-1)(n-2)...2*1, 0! = 1</li>
+      <li>Combinations: nCr = n! / [r!(n-r)!]</li>
     </ul>
   </section>
 
-  <!-- Binomial Theorem -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
-    <h2 class="text-xl font-semibold mb-4">Binomial Theorem</h2>
+  <!-- Factor Theorem (Optional) -->
+  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-teal-500">
+    <h2 class="text-xl font-semibold mb-4">Factor Theorem (Optional)</h2>
 
     <ul class="space-y-2 font-mono">
-      <li>(x + y)ⁿ = Σ nCr · xⁿ⁻ʳyʳ</li>
-      <li>General term: Tᵣ₊₁ = nCr · xⁿ⁻ʳyʳ</li>
-      <li>n! = n(n−1)(n−2)…1</li>
-      <li>nCr = n! / [r!(n−r)!]</li>
+      <li>(x-a) is a factor of f(x) ⇔ f(a) = 0</li>
+      <li>(ax+b) is a factor of f(x) ⇔ f(-b/a) = 0</li>
     </ul>
   </section>
 
