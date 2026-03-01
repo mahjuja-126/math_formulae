@@ -4,125 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Integration (Intro)</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900 p-8">
 
-  <h1 class="text-3xl font-bold text-blue-800 mb-8">
-    Integration (Intro)
-  </h1>
+<h1 class="text-3xl font-bold text-blue-800 mb-8">
+  Integration (Intro)
+</h1>
 
-  <!-- Fundamental Rules -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-blue-500">
-    <h2 class="text-xl font-semibold mb-4">Fundamental Rules</h2>
+<!-- Fundamental Rules -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-blue-500">
+<h2 class="text-xl font-semibold mb-4">Fundamental Rules</h2>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ k dx = kx + C</li>
-      <li>∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C &nbsp;&nbsp;(n ≠ −1)</li>
-      <li>∫ 1/x dx = ln|x| + C</li>
-      <li>∫ (u ± v) dx = ∫ u dx ± ∫ v dx</li>
-    </ul>
-  </section>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int k\,dx = kx + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"><!-- Derivation & Example --></div>
+</details>
 
-  <!-- Exponential & Logarithmic -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-green-500">
-    <h2 class="text-xl font-semibold mb-4">Exponential & Logarithmic Integrals</h2>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \ne -1)\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ eˣ dx = eˣ + C</li>
-      <li>∫ aˣ dx = aˣ / ln a + C</li>
-      <li>∫ e^(mx) dx = (1/m)e^(mx) + C</li>
-      <li>∫ ln x dx = x ln x − x + C</li>
-    </ul>
-  </section>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{1}{x} dx = \ln|x| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-  <!-- Basic Trigonometric -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-yellow-500">
-    <h2 class="text-xl font-semibold mb-4">Basic Trigonometric Integrals</h2>
+<details>
+<summary class="cursor-pointer">\(\int (u \pm v)\,dx = \int u\,dx \pm \int v\,dx\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ sin(ax) dx = −(1/a) cos(ax) + C</li>
-      <li>∫ cos(ax) dx = (1/a) sin(ax) + C</li>
-      <li>∫ sec²x dx = tan x + C</li>
-      <li>∫ csc²x dx = −cot x + C</li>
-      <li>∫ sec x tan x dx = sec x + C</li>
-      <li>∫ csc x cot x dx = −csc x + C</li>
-    </ul>
-  </section>
+<!-- Exponential & Logarithmic -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-green-500">
+<h2 class="text-xl font-semibold mb-4">Exponential & Logarithmic Integrals</h2>
 
-  <!-- Substitution Type -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
-    <h2 class="text-xl font-semibold mb-4">Substitution-Type Integrals</h2>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int e^x dx = e^x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-    <p class="mb-3 text-sm text-gray-700">
-      These are obtained using substitution.
-    </p>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int a^x dx = \frac{a^x}{\ln a} + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ f'(x)/f(x) dx = ln|f(x)| + C</li>
-      <li>∫ f(x)ⁿ f'(x) dx = f(x)ⁿ⁺¹/(n+1) + C</li>
-      <li>∫ f'(x)/√f(x) dx = 2√f(x) + C</li>
-      <li>∫ (ax+b)ⁿ dx = (ax+b)ⁿ⁺¹ / [a(n+1)] + C</li>
-    </ul>
-  </section>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int e^{mx} dx = \frac{1}{m}e^{mx} + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details>
+<summary class="cursor-pointer">\(\int \ln x\,dx = x\ln x - x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
+
+<!-- Basic Trigonometric -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-yellow-500">
+<h2 class="text-xl font-semibold mb-4">Basic Trigonometric Integrals</h2>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sin(ax)\,dx = -\frac{1}{a}\cos(ax) + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \cos(ax)\,dx = \frac{1}{a}\sin(ax) + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sec^2 x\,dx = \tan x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \csc^2 x\,dx = -\cot x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sec x \tan x\,dx = \sec x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details>
+<summary class="cursor-pointer">\(\int \csc x \cot x\,dx = -\csc x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
+
+<!-- Substitution Type -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-purple-500">
+<h2 class="text-xl font-semibold mb-4">Substitution-Type Integrals</h2>
+
+<p class="mb-3 text-sm text-gray-700">These are obtained using substitution.</p>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{f'(x)}{f(x)} dx = \ln|f(x)| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int f(x)^n f'(x)\,dx = \frac{f(x)^{n+1}}{n+1} + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{f'(x)}{\sqrt{f(x)}} dx = 2\sqrt{f(x)} + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details>
+<summary class="cursor-pointer">\(\int (ax+b)^n dx = \frac{(ax+b)^{n+1}}{a(n+1)} + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
 
 <!-- Integration by Parts -->
 <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-red-500">
-  <h2 class="text-xl font-semibold mb-4">Integration by Parts</h2>
+<h2 class="text-xl font-semibold mb-4">Integration by Parts</h2>
 
-  <p class="mb-3 text-sm text-gray-700">
-    Used when the integrand is a product of two functions.
-  </p>
+<p class="mb-3 text-sm text-gray-700">Used when the integrand is a product of two functions.</p>
 
- <p class="font-mono bg-gray-100 p-3 rounded">
-  ∫ u dv = u·v − ∫ v du
-</p>
+\[
+\int u\,dv = uv - \int v\,du
+\]
 
-  <div class="mt-3 bg-blue-50 p-3 rounded">
-    <strong>LIATE Rule (Choosing u):</strong><br>
-    Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Exponential
-    <br>
-    <span class="text-sm text-gray-700">
-      Choose u from the earliest possible category.
-    </span>
-  </div>
+<div class="mt-3 bg-blue-50 p-3 rounded">
+<strong>LIATE Rule (Choosing u):</strong><br>
+Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Exponential
+</div>
 </section>
 
-  <!-- Rational & Inverse Trig Forms -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
-    <h2 class="text-xl font-semibold mb-4">Inverse Trigonometric Forms</h2>
+<!-- Inverse Trigonometric Forms -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
+<h2 class="text-xl font-semibold mb-4">Inverse Trigonometric Forms</h2>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ dx / (1 + x²) = tan⁻¹x + C</li>
-      <li>∫ dx / (a² + x²) = (1/a) tan⁻¹(x/a) + C</li>
-      <li>∫ dx / (a² − x²) = (1/2a) ln|(a+x)/(a−x)| + C</li>
-      <li>∫ dx / (x² − a²) = (1/2a) ln|(x−a)/(x+a)| + C</li>
-      <li>∫ dx / (x√(x²−1)) = sec⁻¹x + C</li>
-    </ul>
-  </section>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{dx}{1+x^2} = \tan^{-1}x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-  <!-- Square Root Integrals -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-teal-500">
-    <h2 class="text-xl font-semibold mb-4">Square Root Forms</h2>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{dx}{a^2+x^2} = \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right) + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ √(a² − x²) dx = (x/2)√(a²−x²) + (a²/2) sin⁻¹(x/a) + C</li>
-      <li>∫ √(x² + a²) dx = (x/2)√(x²+a²) + (a²/2) ln|x+√(x²+a²)| + C</li>
-      <li>∫ √(x² − a²) dx = (x/2)√(x²−a²) − (a²/2) ln|x+√(x²−a²)| + C</li>
-    </ul>
-  </section>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{dx}{a^2-x^2} = \frac{1}{2a}\ln\left|\frac{a+x}{a-x}\right| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-  <!-- Reduction Formula -->
-  <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-pink-500">
-    <h2 class="text-xl font-semibold mb-4">Reduction Formulas</h2>
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \frac{dx}{x^2-a^2} = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
 
-    <ul class="space-y-2 font-mono">
-      <li>∫ sinⁿx dx = −(1/n) sinⁿ⁻¹x cos x + (n−1)/n ∫ sinⁿ⁻²x dx</li>
-      <li>∫ cosⁿx dx = (1/n) cosⁿ⁻¹x sin x + (n−1)/n ∫ cosⁿ⁻²x dx</li>
-      <li>∫ xⁿeˣ dx = xⁿeˣ − n ∫ xⁿ⁻¹eˣ dx</li>
-    </ul>
-  </section>
+<details>
+<summary class="cursor-pointer">\(\int \frac{dx}{x\sqrt{x^2-1}} = \sec^{-1}x + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
+
+<!-- Square Root Forms -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-teal-500">
+<h2 class="text-xl font-semibold mb-4">Square Root Forms</h2>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sqrt{a^2-x^2}\,dx = \frac{x}{2}\sqrt{a^2-x^2} + \frac{a^2}{2}\sin^{-1}\left(\frac{x}{a}\right) + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sqrt{x^2+a^2}\,dx = \frac{x}{2}\sqrt{x^2+a^2} + \frac{a^2}{2}\ln\left|x+\sqrt{x^2+a^2}\right| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details>
+<summary class="cursor-pointer">\(\int \sqrt{x^2-a^2}\,dx = \frac{x}{2}\sqrt{x^2-a^2} - \frac{a^2}{2}\ln\left|x+\sqrt{x^2-a^2}\right| + C\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
+
+<!-- Reduction Formulas -->
+<section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-pink-500">
+<h2 class="text-xl font-semibold mb-4">Reduction Formulas</h2>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \sin^n x\,dx = -\frac{1}{n}\sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x\,dx\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details class="mb-3">
+<summary class="cursor-pointer">\(\int \cos^n x\,dx = \frac{1}{n}\cos^{n-1}x\sin x + \frac{n-1}{n}\int \cos^{n-2}x\,dx\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+
+<details>
+<summary class="cursor-pointer">\(\int x^n e^x dx = x^n e^x - n\int x^{n-1} e^x dx\)</summary>
+<div class="mt-3 text-sm text-gray-600"></div>
+</details>
+</section>
 
 </body>
 </html>
