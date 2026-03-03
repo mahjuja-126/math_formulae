@@ -29,23 +29,133 @@
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int k\,dx = kx + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"><!-- Derivation & Example --></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(F(x) = kx + C\).</p>
+
+<p>Differentiating with respect to \(x\):</p>
+
+\[
+\frac{d}{dx}(kx + C)
+= \frac{d}{dx}(kx) + \frac{d}{dx}(C)
+= k(1) + 0
+= k
+\]
+
+<p>Since the derivative of \(kx + C\) is \(k\),</p>
+
+\[
+\int k\,dx = kx + C.
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \ne -1)\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(F(x) = \frac{x^{n+1}}{n+1} + C\).</p>
+
+<p>Differentiating:</p>
+
+\[
+\frac{d}{dx}\left(\frac{x^{n+1}}{n+1} + C\right)
+= \frac{1}{n+1}\cdot (n+1)x^{(n+1)-1} + 0
+= x^n
+\]
+
+<p>Since the derivative equals \(x^n\),</p>
+
+\[
+\int x^n dx = \frac{x^{n+1}}{n+1} + C,
+\quad n \ne -1.
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{1}{x} dx = \ln|x| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p><strong>Case 1: \(x > 0\)</strong></p>
+
+\[
+\frac{d}{dx}(\ln x) = \frac{1}{x}
+\]
+
+<p><strong>Case 2: \(x < 0\)</strong></p>
+
+<p>Let \(u = -x\), so \(u > 0\).</p>
+
+\[
+\frac{d}{dx}(\ln(-x))
+= \frac{1}{-x}\cdot (-1)
+= \frac{1}{x}
+\]
+
+<p>Thus, in both cases:</p>
+
+\[
+\frac{d}{dx}(\ln |x|) = \frac{1}{x}
+\]
+
+<p>Therefore,</p>
+
+\[
+\int \frac{1}{x} dx = \ln|x| + C.
+\]
+
+</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int (u \pm v)\,dx = \int u\,dx \pm \int v\,dx\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(U = \int u\,dx\) and \(V = \int v\,dx\).</p>
+
+<p>Then:</p>
+
+\[
+\frac{dU}{dx} = u,
+\qquad
+\frac{dV}{dx} = v
+\]
+
+<p>Using linearity of differentiation:</p>
+
+\[
+\frac{d}{dx}(U \pm V)
+= \frac{dU}{dx} \pm \frac{dV}{dx}
+= u \pm v
+\]
+
+<p>Integrating both sides:</p>
+
+\[
+\int (u \pm v)\,dx = U \pm V
+\]
+
+<p>Substituting back:</p>
+
+\[
+\int (u \pm v)\,dx
+= \int u\,dx \pm \int v\,dx.
+\]
+
+</div>
 </details>
+
 </section>
 
 <!-- Exponential & Logarithmic -->
@@ -54,58 +164,260 @@
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int e^x dx = e^x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>By definition of the natural exponential function,</p>
+
+\[
+\frac{d}{dx}(e^x) = e^x
+\]
+
+<p>Therefore,</p>
+
+\[
+\frac{d}{dx}(e^x + C) = e^x + 0 = e^x
+\]
+
+<p>Since the derivative of \(e^x + C\) is \(e^x\),</p>
+
+\[
+\int e^x dx = e^x + C.
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int a^x dx = \frac{a^x}{\ln a} + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Condition:</strong> \(a > 0,\; a \ne 1\)</p>
+
+<p><strong>Derivation:</strong></p>
+
+<p>Recall that:</p>
+
+\[
+a^x = e^{x \ln a}
+\]
+
+<p>Let \(F(x) = \frac{a^x}{\ln a} + C\).</p>
+
+<p>Differentiating:</p>
+
+\[
+\frac{d}{dx}\left(\frac{a^x}{\ln a} + C\right)
+= \frac{1}{\ln a} \cdot \frac{d}{dx}(a^x)
+\]
+
+\[
+= \frac{1}{\ln a} \cdot (a^x \ln a)
+= a^x
+\]
+
+<p>Hence,</p>
+
+\[
+\int a^x dx = \frac{a^x}{\ln a} + C.
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int e^{mx} dx = \frac{1}{m}e^{mx} + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Condition:</strong> \(m \ne 0\)</p>
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(F(x) = \frac{1}{m}e^{mx} + C\).</p>
+
+<p>Using the Chain Rule:</p>
+
+\[
+\frac{d}{dx}\left(\frac{1}{m}e^{mx}\right)
+= \frac{1}{m} \cdot e^{mx} \cdot m
+= e^{mx}
+\]
+
+<p>Therefore,</p>
+
+\[
+\int e^{mx} dx = \frac{1}{m}e^{mx} + C.
+\]
+
+</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int \ln x\,dx = x\ln x - x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
-</details>
-</section>
+<div class="mt-3 text-sm text-gray-600">
 
+<p><strong>Derivation (Integration by Parts):</strong></p>
+
+<p>Using the formula:</p>
+
+\[
+\int u\,dv = uv - \int v\,du
+\]
+
+<p>Let:</p>
+
+\[
+u = \ln x, \quad dv = dx
+\]
+
+<p>Then:</p>
+
+\[
+du = \frac{1}{x}dx, \quad v = x
+\]
+
+<p>Applying the formula:</p>
+
+\[
+\int \ln x\,dx
+= x\ln x - \int x \cdot \frac{1}{x} dx
+\]
+
+\[
+= x\ln x - \int 1\,dx
+\]
+
+\[
+= x\ln x - x + C
+\]
+
+</div>
+</details>
+
+</section>
 <!-- Basic Trigonometric -->
 <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-yellow-500">
 <h2 class="text-xl font-semibold mb-4">Basic Trigonometric Integrals</h2>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sin(ax)\,dx = -\frac{1}{a}\cos(ax) + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}\left(-\frac{1}{a}\cos(ax)\right) 
+= -\frac{1}{a} \cdot (-\sin(ax) \cdot a) 
+= \sin(ax)
+\]
+
+<p>Hence,</p>
+
+\[
+\int \sin(ax)\,dx = -\frac{1}{a}\cos(ax) + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \cos(ax)\,dx = \frac{1}{a}\sin(ax) + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}\left(\frac{1}{a}\sin(ax)\right) 
+= \frac{1}{a} \cdot (\cos(ax) \cdot a) 
+= \cos(ax)
+\]
+
+<p>Thus,</p>
+
+\[
+\int \cos(ax)\,dx = \frac{1}{a}\sin(ax) + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sec^2 x\,dx = \tan x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}(\tan x) = \sec^2 x
+\]
+
+<p>So,</p>
+
+\[
+\int \sec^2 x\,dx = \tan x + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \csc^2 x\,dx = -\cot x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}(-\cot x) = -(-\csc^2 x) = \csc^2 x
+\]
+
+<p>Therefore,</p>
+
+\[
+\int \csc^2 x\,dx = -\cot x + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sec x \tan x\,dx = \sec x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}(\sec x) = \sec x \tan x
+\]
+
+<p>Thus,</p>
+
+\[
+\int \sec x \tan x\,dx = \sec x + C
+\]
+
+</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int \csc x \cot x\,dx = -\csc x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+\[
+\frac{d}{dx}(-\csc x) = -(-\csc x \cot x) = \csc x \cot x
+\]
+
+<p>Hence,</p>
+
+\[
+\int \csc x \cot x\,dx = -\csc x + C
+\]
+
+</div>
 </details>
+
 </section>
 
 <!-- Substitution Type -->
@@ -116,69 +428,171 @@
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{f'(x)}{f(x)} dx = \ln|f(x)| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(u = f(x) \implies du = f'(x) dx\).</p>
+
+\[
+\int \frac{f'(x)}{f(x)} dx = \int \frac{du}{u} = \ln|u| + C = \ln|f(x)| + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
-<summary class="cursor-pointer">\(\int f(x)^n f'(x)\,dx = \frac{f(x)^{n+1}}{n+1} + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<summary class="cursor-pointer">\(\int f(x)^n f'(x)\,dx = \frac{f(x)^{n+1}}{n+1} + C \quad (n \ne -1)\)</summary>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Substitute \(u = f(x) \implies du = f'(x) dx\).</p>
+
+\[
+\int f(x)^n f'(x) dx = \int u^n du = \frac{u^{n+1}}{n+1} + C = \frac{f(x)^{n+1}}{n+1} + C
+\]
+
+</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{f'(x)}{\sqrt{f(x)}} dx = 2\sqrt{f(x)} + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Let \(u = f(x) \implies du = f'(x) dx\).</p>
+
+\[
+\int \frac{f'(x)}{\sqrt{f(x)}} dx = \int u^{-1/2} du = 2 u^{1/2} + C = 2 \sqrt{f(x)} + C
+\]
+
+</div>
 </details>
 
 <details>
-<summary class="cursor-pointer">\(\int (ax+b)^n dx = \frac{(ax+b)^{n+1}}{a(n+1)} + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<summary class="cursor-pointer">\(\int (ax+b)^n dx = \frac{(ax+b)^{n+1}}{a(n+1)} + C \quad (n \ne -1)\)</summary>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Substitute \(u = ax+b \implies du = a\,dx \implies dx = \frac{du}{a}\).</p>
+
+\[
+\int (ax+b)^n dx = \int u^n \frac{du}{a} = \frac{1}{a} \int u^n du = \frac{1}{a} \cdot \frac{u^{n+1}}{n+1} + C = \frac{(ax+b)^{n+1}}{a(n+1)} + C
+\]
+
+</div>
 </details>
 </section>
-
+  
 <!-- Integration by Parts -->
 <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-red-500">
 <h2 class="text-xl font-semibold mb-4">Integration by Parts</h2>
 
 <p class="mb-3 text-sm text-gray-700">Used when the integrand is a product of two functions.</p>
 
+<details>
+<summary class="cursor-pointer">\(\int u\,dv = uv - \int v\,du\)</summary>
+<div class="mt-3 text-sm text-gray-600">
+
+<p><strong>Derivation:</strong></p>
+
+<p>Start with the <strong>Product Rule</strong> for derivatives:</p>
+
+\[
+\frac{d}{dx}[u(x)v(x)] = u \frac{dv}{dx} + v \frac{du}{dx}
+\]
+
+<p>Integrate both sides with respect to \(x\):</p>
+
+\[
+\int \frac{d}{dx}[u v]\,dx = \int u \frac{dv}{dx}\,dx + \int v \frac{du}{dx}\,dx
+\]
+
+\[
+uv = \int u\,dv + \int v\,du
+\]
+
+<p>Rearranging for \(\int u\,dv\):</p>
+
 \[
 \int u\,dv = uv - \int v\,du
 \]
 
-<div class="mt-3 bg-blue-50 p-3 rounded">
-<strong>LIATE Rule (Choosing u):</strong><br>
-Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Exponential
-</div>
-</section>
+<p>This is the standard <strong>Integration by Parts formula</strong>.</p>
 
+<p><strong>Tip (LIATE rule for choosing \(u\)):</strong> Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Exponential</p>
+
+</div>
+</details>
+
+</section>
+  
 <!-- Inverse Trigonometric Forms -->
 <section class="mb-8 p-6 bg-white rounded shadow border-l-4 border-indigo-500">
 <h2 class="text-xl font-semibold mb-4">Inverse Trigonometric Forms</h2>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{dx}{1+x^2} = \tan^{-1}x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+<p>This is a direct result of the derivative:</p>
+\[
+\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2} \quad \implies \quad \int \frac{dx}{1+x^2} = \tan^{-1}x + C
+\]</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{dx}{a^2+x^2} = \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right) + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Let \(u = x/a \implies x = au, dx = a\,du\). Then:</p>
+\[
+\int \frac{dx}{a^2+x^2} = \int \frac{a\,du}{a^2 + a^2 u^2} = \int \frac{du}{a(1+u^2)} = \frac{1}{a} \int \frac{du}{1+u^2} = \frac{1}{a} \tan^{-1}(u) + C
+\]
+\[
+\therefore \int \frac{dx}{a^2+x^2} = \frac{1}{a} \tan^{-1}\left(\frac{x}{a}\right) + C
+\]</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{dx}{a^2-x^2} = \frac{1}{2a}\ln\left|\frac{a+x}{a-x}\right| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Use <strong>partial fractions</strong>:
+\[
+\frac{1}{a^2-x^2} = \frac{1}{(a-x)(a+x)} = \frac{1}{2a}\left(\frac{1}{a-x} + \frac{1}{a+x}\right)
+\]
+\[
+\int \frac{dx}{a^2-x^2} = \frac{1}{2a} \int \left(\frac{1}{a-x} + \frac{1}{a+x}\right) dx = \frac{1}{2a} \ln\left|\frac{a+x}{a-x}\right| + C
+\]</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \frac{dx}{x^2-a^2} = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Again using <strong>partial fractions</strong>:
+\[
+\frac{1}{x^2-a^2} = \frac{1}{(x-a)(x+a)} = \frac{1}{2a}\left(\frac{1}{x-a} - \frac{1}{x+a}\right)
+\]
+\[
+\int \frac{dx}{x^2-a^2} = \frac{1}{2a} \int \left(\frac{1}{x-a} - \frac{1}{x+a}\right) dx = \frac{1}{2a} \ln\left|\frac{x-a}{x+a}\right| + C
+\]</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int \frac{dx}{x\sqrt{x^2-1}} = \sec^{-1}x + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Let \(y = \sec^{-1}x \implies \sec y = x \implies d(\sec y)/dx = 1/\frac{d}{dy}(\sec y) \)</p>
+\[
+\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}} \quad \implies \quad \int \frac{dx}{x\sqrt{x^2-1}} = \sec^{-1}x + C
+\]</div>
 </details>
+
 </section>
 
 <!-- Square Root Forms -->
@@ -187,17 +601,52 @@ Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Expone
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sqrt{a^2-x^2}\,dx = \frac{x}{2}\sqrt{a^2-x^2} + \frac{a^2}{2}\sin^{-1}\left(\frac{x}{a}\right) + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Let \(x = a \sin\theta \implies dx = a \cos\theta\, d\theta\). Then:</p>
+\[
+\int \sqrt{a^2 - x^2}\,dx = \int \sqrt{a^2 - a^2 \sin^2\theta} \, a\cos\theta\, d\theta = a^2 \int \cos^2\theta \, d\theta
+\]
+Use the power-reduction identity \(\cos^2\theta = \frac{1+\cos2\theta}{2}\):
+\[
+a^2 \int \cos^2\theta \, d\theta = \frac{a^2}{2} \int (1 + \cos 2\theta)\, d\theta = \frac{a^2}{2} \left(\theta + \frac{1}{2}\sin 2\theta\right) + C
+\]
+Substitute back: \(\theta = \sin^{-1}(x/a)\), \(\sin 2\theta = 2\sin\theta \cos\theta = 2(x/a)\sqrt{1-(x/a)^2}\):
+\[
+\int \sqrt{a^2-x^2}\,dx = \frac{x}{2}\sqrt{a^2-x^2} + \frac{a^2}{2} \sin^{-1}\left(\frac{x}{a}\right) + C
+\]</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sqrt{x^2+a^2}\,dx = \frac{x}{2}\sqrt{x^2+a^2} + \frac{a^2}{2}\ln\left|x+\sqrt{x^2+a^2}\right| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Let \(x = a \tan\theta \implies dx = a \sec^2\theta\, d\theta\), then \(\sqrt{x^2+a^2} = a \sec\theta\):
+\[
+\int \sqrt{x^2+a^2}\,dx = \int a \sec\theta \cdot a \sec^2\theta \, d\theta = a^2 \int \sec^3\theta \, d\theta
+\]
+Using \(\int \sec^3\theta \, d\theta = \frac{1}{2} (\sec\theta \tan\theta + \ln|\sec\theta + \tan\theta|)\):
+\[
+\int \sqrt{x^2+a^2}\,dx = \frac{a^2}{2} \left(\sec\theta \tan\theta + \ln|\sec\theta + \tan\theta|\right) + C
+\]
+Substitute back: \(\sec\theta = \sqrt{x^2+a^2}/a\), \(\tan\theta = x/a\):
+\[
+\int \sqrt{x^2+a^2}\,dx = \frac{x}{2}\sqrt{x^2+a^2} + \frac{a^2}{2} \ln\left|x + \sqrt{x^2+a^2}\right| + C
+\]</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int \sqrt{x^2-a^2}\,dx = \frac{x}{2}\sqrt{x^2-a^2} - \frac{a^2}{2}\ln\left|x+\sqrt{x^2-a^2}\right| + C\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Let \(x = a \sec\theta \implies dx = a \sec\theta \tan\theta\, d\theta\), then \(\sqrt{x^2-a^2} = a \tan\theta\):
+\[
+\int \sqrt{x^2-a^2}\,dx = \int a \tan\theta \cdot a \sec\theta \tan\theta\, d\theta = a^2 \int \tan^2\theta \sec\theta\, d\theta
+\]
+Use \(\tan^2\theta = \sec^2\theta - 1\) and integrate:
+\[
+\int \sqrt{x^2-a^2}\,dx = \frac{1}{2} x\sqrt{x^2-a^2} - \frac{a^2}{2} \ln|x + \sqrt{x^2-a^2}| + C
+\]</div>
 </details>
 </section>
 
@@ -207,17 +656,40 @@ Logarithmic → Inverse Trigonometric → Algebraic → Trigonometric → Expone
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \sin^n x\,dx = -\frac{1}{n}\sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x\,dx\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Using Integration by Parts, let \(u = \sin^{n-1}x\), \(dv = \sin x dx\) → \(du = (n-1)\sin^{n-2}x \cos x dx\), \(v = -\cos x\):
+\[
+\int \sin^n x dx = -\sin^{n-1}x \cos x + (n-1) \int \sin^{n-2} x dx
+\]
+Divide by \(n\) to get the standard reduction formula:
+\[
+\int \sin^n x dx = -\frac{1}{n} \sin^{n-1}x \cos x + \frac{n-1}{n} \int \sin^{n-2} x dx
+\]</div>
 </details>
 
 <details class="mb-3">
 <summary class="cursor-pointer">\(\int \cos^n x\,dx = \frac{1}{n}\cos^{n-1}x\sin x + \frac{n-1}{n}\int \cos^{n-2}x\,dx\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Using Integration by Parts, let \(u = \cos^{n-1}x\), \(dv = \cos x dx\) → \(du = -(n-1) \cos^{n-2}x \sin x dx\), \(v = \sin x\):
+\[
+\int \cos^n x dx = \cos^{n-1}x \sin x + (n-1) \int \cos^{n-2} x dx
+\]
+Divide by \(n\) to match the standard reduction formula:
+\[
+\int \cos^n x dx = \frac{1}{n} \cos^{n-1}x \sin x + \frac{n-1}{n} \int \cos^{n-2} x dx
+\]</div>
 </details>
 
 <details>
 <summary class="cursor-pointer">\(\int x^n e^x dx = x^n e^x - n\int x^{n-1} e^x dx\)</summary>
-<div class="mt-3 text-sm text-gray-600"></div>
+<div class="mt-3 text-sm text-gray-600">
+<p><strong>Derivation:</strong></p>
+Use Integration by Parts, let \(u = x^n\), \(dv = e^x dx\) → \(du = n x^{n-1} dx\), \(v = e^x\):
+\[
+\int x^n e^x dx = x^n e^x - \int n x^{n-1} e^x dx = x^n e^x - n \int x^{n-1} e^x dx
+\]</div>
 </details>
 </section>
 
